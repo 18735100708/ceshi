@@ -919,7 +919,7 @@ public class DispatcherServlet extends FrameworkServlet {
 				HandlerAdapter ha = getHandlerAdapter(mappedHandler.getHandler());
 
 				// Process last-modified header, if supported by the handler.
-				// 处理 last-modified 请求头
+				// 处理 last-modified 请求头 判断Request的请求类型，拿到request传过来的所有东西（参数）
 				String method = request.getMethod();
 				boolean isGet = "GET".equals(method);
 				if (isGet || "HEAD".equals(method)) {
